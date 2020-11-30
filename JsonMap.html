@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script>
+			var map;
+			function initialize() {
+				// Create a simple map.
+				map = new google.maps.Map(document.getElementById('map-canvas'), {
+					zoom : 1,
+					center : {
+						lat : 36.7801930,
+						lng : -78.0893020
+					}
+				});
+
+				// Load a GeoJSON from the same server as our demo.
+				//map.data.loadGeoJson('churches.json');
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+	</head>
+	<body>
+		<div id="map-canvas"></div>
+	</body>
+</html>
+
